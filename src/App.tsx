@@ -10,7 +10,7 @@ import {Dialogs} from "./layout/navigation/dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {v4} from "uuid";
 import {Profile} from "./layout/navigation/profile/Profile";
-import {AppPropsWrapperType} from "./index";
+import {AppPropsWrapperType} from "./types/types";
 const menuItems = ["Profile", "Dialogs", "News","Music", "Settings"];
 
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {ListItem} from "@mui/material";
 import AvatarIcon from '../../../../../images/ava_icon.jpg';
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
-import {PostType} from "../../../../../index";
+import {PostType} from "../../../../../types/types";
 
 const Post = (props: { post: PostType }) => {
     const post = props.post;

@@ -2,7 +2,7 @@ import React from 'react';
 import Post from "./post/Post";
 import {v4} from "uuid";
 import {InputForm} from "../../../../components/InputForm";
-import {PostArrayWrapper, PostType} from "../../../../index";
+import {PostArrayWrapper, PostType} from "../../../../types/types";
 
 
 

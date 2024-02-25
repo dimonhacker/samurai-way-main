@@ -3,7 +3,7 @@ import {ContentWrapper} from "../../../components/ContentWrapper";
 import Dialog from "./Dialog";
 import styled from "styled-components";
 import Message from "./Message";
-import {DialogsPropsType, DialogsPropsWrapperType} from "../../../index";
+import {DialogsPropsWrapperType} from "../../../types/types";
 
 
 
