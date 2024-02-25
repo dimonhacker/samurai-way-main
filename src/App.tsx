@@ -21,7 +21,7 @@ const App = (props: AppPropsWrapperType) => (
             <Nav menuItems={menuItems}/>
                 <Routes>
                     <Route key={v4()} path={"/dialogs/*"} element={<Dialogs dialogsProps={props.appProps.dialogsProps}/>}/>
-                    <Route key={v4()} path={"/profile"} element={<Profile profileProps={props.appProps.profileProps.profileProps}/>}/>
+                    <Route key={v4()} path={"/profile"} element={<Profile profileProps={props.appProps.profileProps}/>}/>
                 </Routes>
         </Wrapper>
     </BrowserRouter>

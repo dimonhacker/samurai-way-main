@@ -47,7 +47,7 @@ export type PostArrayWrapper = {
 }
 export type AppProps = {
     dialogsProps: DialogsPropsType
-    profileProps: ProfilePropsWrapperType
+    profileProps: ProfilePropsType
 }
 export type DialogsPropsWrapperType = {
     dialogsProps: DialogsPropsType
@@ -68,7 +68,7 @@ const profileProps: ProfilePropsWrapperType = {
 }
 const appProps: AppProps = {
     dialogsProps: dialogsPropsWrapper,
-    profileProps: profileProps
+    profileProps: posts
 }
 export type AppPropsWrapperType = {
     appProps: AppProps
