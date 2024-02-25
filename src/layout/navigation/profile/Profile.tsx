@@ -1,13 +1,17 @@
 import React from 'react';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import {ContentWrapper} from "../../../components/ContentWrapper";
+import {MyPosts} from "./posts/MyPosts";
+
+
+
 
 export const Profile = () => {
-    function toString(){
-        return "Profile";
-    }
     return (
-        <div>
-            Profile
-        </div>
+        <ContentWrapper>
+            <ProfileInfo />
+            <MyPosts/>
+        </ContentWrapper>
     );
 };
 

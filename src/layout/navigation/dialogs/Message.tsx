@@ -1,14 +1,9 @@
 import React from 'react';
-import {type} from "os";
 import styled from "styled-components";
-import {Route, Routes} from "react-router-dom";
-import {v4} from "uuid";
-import Dialog from "./Dialog";
-import {Dialogs} from "./Dialogs";
-import {Content} from "../../content/Content";
 
 type MessageType = {
     body:string
+    id:string
 }
 
 const Message = (props:MessageType) => {

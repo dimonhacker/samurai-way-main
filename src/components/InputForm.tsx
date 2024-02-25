@@ -1,20 +1,13 @@
 import React from 'react';
-import {FlexWrapper} from "./FlexWrapper";
-import styled from "styled-components";
+import {Button, TextField} from "@mui/material";
 
 export const InputForm = () => {
     return (
-        <FlexWrapper>
-            <StyledTextArea></StyledTextArea>
-            <StyledButton>Add post</StyledButton>
-        </FlexWrapper>
+        <>
+            <TextField sx={{background: 'white'}}/>
+            <div>
+                <Button variant={"outlined"} sx={{background: 'white'}}>Add post</Button>
+            </div>
+        </>
     );
 };
-
-const StyledTextArea = styled.textarea`
-  border-radius: 5px;
-`
-const StyledButton = styled.button`
-    border-radius: 5px;
-    padding: 0.5em;
-`

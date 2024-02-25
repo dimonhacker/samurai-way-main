@@ -6,6 +6,7 @@ type FlexWrapperType = {
     align?: string
     wrap?: string
     alignItems?: string
+    gap?:string
 }
 export const FlexWrapper = styled.div<FlexWrapperType>`
   display: flex;
@@ -14,4 +15,5 @@ export const FlexWrapper = styled.div<FlexWrapperType>`
   align-items: ${props => props.align || "stretch"};
   flex-wrap: ${props => props.wrap || "wrap"};
   align-items: ${props => props.alignItems || ""};
+  gap: ${props => props.gap || ".5em"};
 `

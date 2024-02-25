@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
-import {Content} from "../content/Content";
 import {Dialogs} from "./dialogs/Dialogs";
+import {Profile} from "./profile/Profile";
 
 type ContentHolderType = {
     contentName : string
 }
 const ContentHolder = (props:ContentHolderType) => {
-    const [contentHolder, setContentHolder] = useState<JSX.Element>(Content);
-    if(props.contentName==="Dialogs"){
-        setContentHolder(Dialogs)
-    }
-    else setContentHolder(Content)
+    const [contentHolder, setContentHolder] = useState<JSX.Element>(Profile);
+    // if(props.contentName==="Dialogs"){
+    //     setContentHolder(Dialogs())
+    // }
+    // else setContentHolder(Profile)
     return (
         contentHolder
     );
