@@ -8,17 +8,24 @@ import {v4} from "uuid";
 
 export type DialogsArrayProps = Array<DialogProps>
 export type DialogProps = {
-    id:string
-    name:string
+    id: string
+    name: string
 }
 export type MessagesArrayProps = Array<MessageProps>
 export type MessageProps = {
-    id:string
-    name:string
+    id: string
+    name: string
 }
 export type DialogsPropsType = {
-    dialogs:DialogsArrayProps
+    dialogs: DialogsArrayProps
     messages: MessagesArrayProps
+}
+
+export type PostType = {
+
+    id: string
+    message: string
+    likesCount: number
 }
 
 let dialogsArray = [
@@ -35,28 +42,49 @@ let messagesArray = [
     {id: v4(), name: "yo"}
 ]
 
+export type PostArrayWrapper = {
+    postArray: Array<PostType>
+}
 export type AppProps = {
-    dialogsProps:DialogsPropsType
-    num:number
+    dialogsProps: DialogsPropsType
+    profileProps: ProfilePropsWrapperType
 }
-export type DialogsPropsWrapperType={
-    dialogsProps:DialogsPropsType
+export type DialogsPropsWrapperType = {
+    dialogsProps: DialogsPropsType
 }
-const dialogsPropsWrapper:DialogsPropsType = {
-        dialogs: dialogsArray,
-        messages: messagesArray
+const dialogsPropsWrapper: DialogsPropsType = {
+    dialogs: dialogsArray,
+    messages: messagesArray
 }
-const appProps:AppProps = {
-    dialogsProps:dialogsPropsWrapper,
-    num:1
+const postsArray: Array<PostType> = [
+    {id: v4(), message: "Hello, how are your?", likesCount: 12},
+    {id: v4(), message: "It's my first post", likesCount: 1},
+]
+const posts: PostArrayWrapper = {
+    postArray: postsArray
+}
+const profileProps: ProfilePropsWrapperType = {
+    profileProps: posts
+}
+const appProps: AppProps = {
+    dialogsProps: dialogsPropsWrapper,
+    profileProps: profileProps
 }
 export type AppPropsWrapperType = {
-    appProps:AppProps
+    appProps: AppProps
+}
+export type ProfilePropsWrapperType = {
+    profileProps: ProfilePropsType
+}
+export type ProfilePropsType = {
+    postArray: Array<PostType>
+    profileInfo?: Object
+
 }
 ReactDOM.render(
     <React.StrictMode>
-    <GlobalStyle/>
-    <App appProps={appProps}/>
-    </React.StrictMode>        ,
-  document.getElementById('root')
+        <GlobalStyle/>
+        <App appProps={appProps}/>
+    </React.StrictMode>,
+    document.getElementById('root')
 );

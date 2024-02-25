@@ -6,13 +6,14 @@ type ContentHolderType = {
     contentName : string
 }
 const ContentHolder = (props:ContentHolderType) => {
-    const [contentHolder, setContentHolder] = useState<JSX.Element>(Profile);
+    // const [contentHolder, setContentHolder] = useState<JSX.Element>(Profile);
     // if(props.contentName==="Dialogs"){
     //     setContentHolder(Dialogs())
     // }
     // else setContentHolder(Profile)
     return (
-        contentHolder
+        // contentHolder
+        null
     );
 };
 

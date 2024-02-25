@@ -2,19 +2,12 @@ import React from 'react';
 import Post from "./post/Post";
 import {v4} from "uuid";
 import {InputForm} from "../../../../components/InputForm";
+import {PostArrayWrapper, PostType} from "../../../../index";
 
-export type PostType = {
 
-    id: string
-    message: string
-    likesCount: number
-}
 
-export const MyPosts = () => {
-    let postsArray:Array<PostType> = [
-        {id: v4(), message: "Hello, how are your?", likesCount:12},
-        {id: v4(), message: "It's my first post", likesCount:1},
-    ]
+export const MyPosts = (props:PostArrayWrapper) => {
+    let postsArray:Array<PostType> = props.postArray
     return (
         <div>
             <h2>My Posts</h2>

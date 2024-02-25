@@ -1,9 +1,9 @@
 import React from 'react';
-import {PostType} from "../MyPosts";
 import styled from "styled-components";
 import {ListItem} from "@mui/material";
-import AvatarIcon from '../../../../images/ava_icon.jpg'
+import AvatarIcon from '../../../../../images/ava_icon.jpg';
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
+import {PostType} from "../../../../../index";
 
 const Post = (props: { post: PostType }) => {
     const post = props.post;
