@@ -10,7 +10,7 @@ type DialogType={
 const Dialog = (props:DialogType) => {
     return (
         <StyledDiv className={"dialog"}>
-            <NavLink to={props.title}>{props.title}</NavLink>
+            <NavLink to={props.id}>{props.title}</NavLink>
         </StyledDiv>
     );
 };
